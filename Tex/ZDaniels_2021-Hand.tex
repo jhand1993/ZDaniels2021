@@ -1,0 +1,58 @@
+\documentclass[modern]{aastex63}
+\usepackage[utf8]{inputenc} 
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{fancyhdr}   
+\usepackage{geometry}
+\usepackage{amsmath}
+\renewcommand{\baselinestretch}{1.0}
+\usepackage{amssymb}
+%\renewcommand{rnaas}{True}
+
+\geometry{lmargin=1in, bmargin=1in, tmargin=0.5in, rmargin=1in}
+
+\pagestyle{plain}
+
+\begin{document}
+\title{Research Statement}
+% \title{Disentangling Sources of SN Ia Variation}
+
+\author{Jared Hand}
+\affiliation{University of Pittsburgh, \textnormal{jsh89@pitt.edu}}
+%\affiliation{\textbf{\textnormal{jsh89@pitt.edu}}}
+
+% \begin{abstract}
+%     We ask to supplement a {\bf graduate student} and fund an {\bf undergraduate} in a project studying the influence of dust attenuation correction on SN~Ia host bias corrections and its connection to SN~Ia color variation.
+%     Better understanding SN~Ia color variation and characteristics of the host bias will improve the utility of SNe~Ia for measuring dark energy in the era of the Vera C. Rubin Observatory LSST survey.\\
+%     {\bf Request: \$10,000}
+% \end{abstract}
+
+
+\section{Introduction}
+The extreme brightness of type Ia supernova (SNe~Ia) are standardized using correlations between peak brightness and both SED `blueness' and explosion duration to reduce the already naturally low scatter in peak brightness, allowing their use as cosmic `rulers' to constrain cosmological models and explore the properties of dark energy \citep{Perlmutter1999}.
+A lack of theoretical understanding SN~Ia necessitates these transient objects be parameterized by generative empirical models trained from representative SN samples.
+The current linear Tripp standardization technique and commonly used SN~Ia models cannot differentiate between time-independent wavelength (color) variation intrinsic to the SN~Ia population and color variation from host galaxy dust attenuation \citep{Mandel2017}, and overcorrects for a known bias where brighter SN~Ia prefer younger, less massive hosts with higher star formation rates (SFR) \citep{Sullivan2010,Rigault2018}.
+SFR and stellar age are highly correlated with both each other and dust attenuation
+This host bias propagating through Tripp standardization increases cosmological measurement uncertainty and is driven both by mishandling of dust effects on SN~Ia color variation and ignoring the established host bias during standardization \citep{Brout2021,Rose2021}.
+
+\section{Studying Effects of Dust on Host Bias}
+My first project focuses on systematics arising from how we measure host properties, with my first and recently resubmitted paper alleviating concerns of bias arising from chosen observation or fitting technique.  This first project now is focused on quantifying dependence of host SFR and stellar age on host dust attenuation measurement using different observational SFR tracers such as H$\alpha$ emission, which provides an instantaneous ($<10$~Myr) SFR measurement, and UV flux, which provides an extended ($10-100$~Myr) SFR measurement. 
+Our planned integration of sophisticated galaxy attenuation curve modeling from \cite{Salim2018} and \cite{Narayanan2018} will be a dramatic improvement from past SN~Ia analyses.
+Numerous covariates including latent model parameters intrinsic to SN~Ia standardization necessitates efficient posterior analysis which will be done using a hierarchical Bayesian framework implemented with a Hamiltonian Monte Carlo sampler built into the software package Stan \cite{STAN}.
+Joining this project are two undergraduates of the Michael Wood-Vasey research group, who I will be mentoring over the course of the next year.
+
+\section{Separating Sources of Color Variation:}
+My second project's genesis is from a DOE SCGSR award I received in 2019 to work with Dr. Alex Kim of the Lawrence Berkeley National Laboratory using spectroscopic SN~Ia time series to build hierarchical Bayesian model with Gaussian processes to agnostically disentangle the intrinsic color variation of SNe~Ia from host dust effects.
+Parameterizing color variation using a set of multiplicative color variation curves that makes no strong prior assumption on color curve shape, our model instead exploits mathematical symmetries to converge.
+The color variation curve wavelength resolution is adjustable, and time-varying color variation is being implemented to create a fully generative SN~Ia empirical model.
+We are in the process of preparing our first manuscript for this project.
+
+{\bf Dissertation Progress Notes:}
+My second committee meeting and DOE award were both delayed by health issues during 2020 and the COVID-19 pandemic. 
+The second meeting is now planned for June 2021 and the DOE award, restarted remotely in January 2021, will conclude August 2021. 
+
+\newpage
+\bibliographystyle{aasjournal}
+\bibliography{main}
+
+\end{document}
